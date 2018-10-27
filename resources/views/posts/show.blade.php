@@ -34,6 +34,11 @@
 					               <input type="hidden" name="_token" value="{{Session::token()}}">{{method_field('DELETE')}}
 					            </form>
 					  		</div>
+
+					  		<div class="col-md-12" style="margin-top: 10px">
+					  			<a href="{{ route('posts.index') }}" class="btn btn-warning btn-block">View All Posts</a>
+					  		</div>
+
 					  </div>
 					 
 			  </div>
