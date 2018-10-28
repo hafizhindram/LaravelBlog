@@ -8,7 +8,7 @@ use App\Post;
 class PagesController extends Controller
 {
     public function getIndex(){
-    	$posts = Post::orderBy('created_at','desc')->paginate(3);
+    	$posts = Post::orderBy('id','desc')->paginate(3);
     	return view('pages.home', compact('posts'));
     }
 
