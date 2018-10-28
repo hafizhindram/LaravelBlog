@@ -17,7 +17,7 @@
       <div class="card-body">
         <h2 class="card-title">{{ $post->title }}</h2>
         <p class="card-text">{{ substr($post->body, 0,200) }}{{ strlen($post->body) > 200 ?"..." :"" }}</p>
-        <a href="#" class="btn btn-primary">Read More &rarr;</a>
+        <a href="{{ url('blog/'.$post->slug) }}" class="btn btn-primary">Read More &rarr;</a>
       </div>
       <div class="card-footer text-muted">
         {{ date('M j, Y', strtotime ($post->created_at)) }} by

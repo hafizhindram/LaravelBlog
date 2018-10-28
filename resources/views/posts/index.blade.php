@@ -29,11 +29,14 @@
 				    </tr>
 				  </thead>
 				  <tbody>
+				  	@php
+				  		$no = 1;
+				  	@endphp
 				    <tr>
 				      @foreach ($posts as $post)
 
 				      	<tr>
-				      		<th>{{ $post->id }}</th>
+				      		<th>{{ $no++ }}</th>
 				      		<td>{{ $post->title }}</td>
 				      		<td>{{ substr($post->body, 0, 50) }}{{ strlen($post->body) > 50 ? "..." :"" }}</td>
 				      		<td>{{ date('M j, Y', strtotime ($post->created_at)) }}</td>

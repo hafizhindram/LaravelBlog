@@ -13,7 +13,7 @@
 		    <div class="col-sm-9" style="margin-top: 10px">
 		     {{--  <a href="{{ url($post->slug) }}"><input type="text"class="form-control" 
 		      	value="{{url($post->slug)}}"></a> --}}
-		      	<a href="{{ url($post->slug) }}">{{url($post->slug)}}</a>
+		      	<a href="{{ route('blog.single', $post->slug) }}">{{ route('blog.single', $post->slug) }}</a>
 		    </div>
 		  </div>
 		  <div class="form-group row">
