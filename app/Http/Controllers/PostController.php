@@ -17,7 +17,7 @@ class PostController extends Controller
      */
     public function index()//Menampilkan Index
     {
-        $posts = Post::paginate(3);
+        $posts = Post::paginate(1);
 
         return view('posts.index')->with('posts', $posts);
     }
@@ -73,7 +73,7 @@ class PostController extends Controller
     public function show($id)//Select / menampilkan
     {
         $post = Post::find($id);
-        return view('posts.show')->with('post', $post);
+        return view('posts.show', compact('post'));
     }
 
     /**

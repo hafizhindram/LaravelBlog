@@ -48,13 +48,18 @@
 				    </tr>
 				  </tbody>
 				</table>
-				<div class="row">
-					<div class="col-md-5"></div>
-					<div class="col-md-2">{{ $posts->links()}}</div>
-				</div>
-				<div class="text-center">
-					
-				</div>
+				
+				<!-- Pagination -->
+			    <ul class="pagination justify-content-center mb-4">
+			      <li class="page-item">
+			        <a class="page-link" href="#">&larr; Older</a>
+			      </li>
+			      {{ $posts->links()}}
+			      <li class="page-item disabled">
+			        <a class="page-link" href="#">Newer &rarr;</a>
+			      </li>
+			    </ul>
+				
 			</div>			
 		</div>
 
