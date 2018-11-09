@@ -17,7 +17,7 @@ class PostController extends Controller
      */
     public function index()//Menampilkan Index
     {
-        $posts = Post::paginate(1);
+        $posts = Post::paginate(3);
 
         return view('posts.index')->with('posts', $posts);
     }
@@ -47,14 +47,13 @@ class PostController extends Controller
         $this->validate($request, array(
 
             'title'=>'required|max:255',
-            'slug'=>'required|min:5|max:255|alpha_dash|unique:posts,slug',
             'body'=>'required'
         )); 
         // Store in the Database
         $post = new Post;
 
         $post->title = $request->title;
-        $post->slug = $request->slug;
+        $post->slug = str_slug($request->title);
         $post->body = $request->body; 
 
         $post->save();

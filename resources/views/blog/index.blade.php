@@ -16,7 +16,7 @@
 
 			<p>{{ substr($post->body, 0, 250) }}{{ strlen($post->body) > 250 ? "..." :"" }}</p>
 
-			<a href="{{ route('blog.single', $post->id)}}">Read More</a>
+			<a href="{{ route('blog.single', $post->slug)}}">Read More</a>
 		</div>
 	</div>
 	@endforeach

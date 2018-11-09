@@ -9,9 +9,6 @@
 			<h5><label>Title</label></h5>
 			<input name="title" class="form-control" rows="1" value="{{ $post->title }}">
 			<br>
-			<h5><label>Slug</label></h5>
-			<input name="slug" class="form-control" rows="1" value="{{ $post->slug }}">
-			<br>
 			<h5><label>Body</label></h5>
 			<textarea name="body" class="form-control" rows="9">{{ $post->body }}</textarea>
 	</div>

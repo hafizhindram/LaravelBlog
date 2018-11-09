@@ -13,10 +13,14 @@
 Route::group(['middleware'=>['web']], function(){
 	Route::get('blog/{slug}', ['as' => 'blog.single', 'uses'=>'BlogController@getSingle'])
 	->where('slug', '[\w\d\-\_]+');
-	Route::get('blog', ['uses' => 'BlogController@getIndex', 'as' => 'blog.index']);
-	Route::get('about', 'PagesController@getAbout');
-	Route::get('contact', 'PagesController@getContact');
+	Route::get('/blog', ['uses' => 'BlogController@getIndex', 'as' => 'blog.index']);
+	Route::get('/about', 'PagesController@getAbout');
+	Route::get('/contact', 'PagesController@getContact');
 	Route::get('/', 'PagesController@getIndex');
 	Route::resource('posts', 'PostController');
 });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

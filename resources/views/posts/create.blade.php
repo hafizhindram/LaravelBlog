@@ -21,10 +21,6 @@
 				<input type="text" name="title" class="form-control" placeholder="New Title">
 			</div>
 			<div class="form-group">
-				<label>Slug</label>
-				<input type="text" name="slug" class="form-control">
-			</div>
-			<div class="form-group">
 				<label>Body</label>
 				<textarea class="form-control"name="body" rows="9"></textarea>
 			</div>
